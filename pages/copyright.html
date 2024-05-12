@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cedric Anover | Web Tech | Cert 4 Programming</title>
+
+    <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<header class="text-gray-200 bg-gray-800 border-t border-x border-gray-100 shadow-sm body-font px-[10px] py-[5px]">
+    <div class="flex justify-center items-center mx-auto lg:flex-row gap-2">
+        <!--Logo and Site Name-->
+        <a href="../" class="flex justify-between items-center gap-2">
+            <img src="https://placehold.co/64?text=logo" alt="Logo"
+                 class="w-[60px] md:w-[90px] lg:w-[105px] px-[5px] py-[5px]">
+            <h1 class="text-sm font-mono font-bold px-[5px] py-[5px]">Certificate IV in IT (Programming) Web Tech
+                Portfolio</h1>
+        </a>
+
+        <!--Navigation for Larger Screens-->
+        <nav class="hidden md:flex md:justify-items-center md:w-auto ml-auto md:mx-auto">
+            <ul class="font-mono text-md border-gray-300 list-reset md:flex justify-end flex-1 items-center ml-10">
+                <li><a href="../" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Home</a></li>
+                <li><a href="../phase-1" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Phase 1</a>
+                </li>
+                <li><a href="../phase-2" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Phase 2</a>
+                </li>
+                <li><a href="../phase-3" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Phase 3</a>
+                </li>
+                <li><a href="../phase-4" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Phase 4</a>
+                </li>
+                <li><a href="../phase-5" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Phase 5</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Icon (for Smaller Screens) -->
+        <div class="block md:hidden">
+            <button id="menu-toggle"
+                    class="text-gray-50 focus:outline-none focus:text-gray-50 focus:bg-[#615F81] p-2 rounded-lg border-2 border-[#E7E7E7]">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu for Smaller Screens -->
+    <div class="md:hidden" id="mobile-menu">
+        <ul class="list-reset">
+            <li><a href="../" class="block hover:bg-[#9E9BB5] px-4 py-2">Home</a></li>
+            <li><a href="../phase-1" class="block hover:bg-[#9E9BB5] px-4 py-2">Phase 1</a></li>
+            <li><a href="../phase-2" class="block hover:bg-[#9E9BB5] px-4 py-2">Phase 2</a></li>
+            <li><a href="../phase-3" class="block hover:bg-[#9E9BB5] px-4 py-2">Phase 3</a></li>
+            <li><a href="../phase-4" class="block hover:bg-[#9E9BB5] px-4 py-2">Phase 4</a></li>
+            <li><a href="../phase-5" class="block hover:bg-[#9E9BB5] px-4 py-2">Phase 5</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="bg-white border w-4/5 mx-auto my-8 shadow-xl mt-8">
+    <article class="flex flex-col gap-4">
+        <header class="bg-gray-800 text-white p-4">
+            <h2 class="text-2xl text-bold">
+                Copyright and References to Materials and Resources Used
+            </h2>
+        </header>
+
+        <section class="m-4 flex flex-col gap-4">
+            <header>
+                <h3 class="text-xl font-semibold">Copyright</h3>
+            </header>
+            <div>
+                <p>Content is copyright Adrian Gould, Cedric Anover, and the respective owners of images, text and other
+                    related content not originally created by Cedric Anover for the purpose of this assessment.</p>
+            </div>
+        </section>
+
+        <section class="m-4 flex flex-col gap-4">
+            <header>
+                <h3 class="text-xl font-semibold">Web References</h3>
+            </header>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-gray-700 gap-8">
+                <p class="shadow p-2"><strong>Nath, B.</strong>
+                    (2022, September 7).
+                    <em>7 Powerful Node.js HTTP Client and Request Library to Know as a Developer</em>.
+                    Geekflare.
+                    <a href="https://geekflare.com/node-js-http-client-and-request-library/"
+                       target="_blank"
+                       class=" underline underline-offset-2 text-sky-700 hover:text-sky-100 hover:bg-sky-700">
+                        https://geekflare.com/node-js-http-client-and-request-library/</a>.
+                </p>
+
+                <p class="shadow p-2"><strong>Firdaus, T.</strong>
+                    (2015, February 17).
+                    <em>30 CSS Puns That Prove Designers Have a Great Sense of Humor</em>.
+                    Hongkiat.
+                    <a href="https://www.hongkiat.com/blog/funny-css-puns/"
+                       target="_blank"
+                       class="underline underline-offset-2 text-sky-700 hover:text-sky-100 hover:bg-sky-700">
+                        https://www.hongkiat.com/blog/funny-css-puns/
+                    </a>.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="m-4 flex flex-col gap-4">
+            <header>
+                <h3 class="text-xl font-semibold">Image References</h3>
+            </header>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-gray-700 gap-8">
+                <p class="shadow p-2"><strong>Fluper</strong>.
+                    (n.d.).
+                    Python [Online Image].
+                    In <em>Pinterest</em>. Retrieved March 5, 2024, from
+                    <a href="https://www.pinterest.com.au/pin/636555728560520122/" target="_blank"
+                       class=" underline underline-offset-2 text-sky-700 hover:text-sky-100 hover:bg-sky-700">
+                        www.pinterest.com.au</a>.
+                </p>
+
+                <p class="shadow p-2"><strong>Kinsella, P. (2012).</strong>
+                    Human Error, Stupid (computers) [Online Image].
+                    In <em>CartoonStock</em>. Retrieved March 5, 2024, from
+                    <a href="https://www.cartoonstock.com/cartoon?searchID=CS344355" target="_blank"
+                       class=" underline underline-offset-2 text-sky-700 hover:text-sky-100 hover:bg-sky-700">
+                        https://www.cartoonstock.com</a>.
+                </p>
+
+                <p class="shadow p-2"><strong>Sapozhnikova, A. (2021).</strong>
+                    woman in gray sweater using silver macbook [Online Image].
+                    In <em>Unsplash</em>. Retrieved March 5, 2024, from
+                    <a href="https://unsplash.com/photos/woman-in-gray-sweater-using-silver-macbook-r_-zzXrnzxI"
+                       target="_blank"
+                       class=" underline underline-offset-2 text-sky-700 hover:text-sky-100 hover:bg-sky-700">
+                        https://unsplash.com</a>.
+                </p>
+
+                <p class="shadow p-2"><strong>Tailwind CSS</strong>.
+                    (n.d.).
+                    TailwindCSS Logo [Online Image].
+                    In <em>Tailwind CSS</em>. Retrieved October 10, 2023, from
+                    <a href="https://tailwindcss.com" target="_blank"
+                       class=" underline underline-offset-2 text-sky-700 hover:text-sky-100 hover:bg-sky-700">
+                        https://tailwindcss.com</a>.
+                </p>
+            </div>
+        </section>
+
+    </article>
+</main>
+
+<footer class="text-gray-400 bg-gray-800 text-sm font-mono border-t border-x mt-auto border-gray-100 shadow-sm">
+    <div class="container w-full mx-auto flex flex-col md:flex-row items-center justify-between">
+        <a href="../" class="flex items-center my-[5px] md:my-[10px]">
+            <img src="https://placehold.co/64?text=logo" alt="Logo">
+        </a>
+
+        <p class="my-[5px] px-[10px] md:my-[10px] text-center">
+            © Copyright 2023 Adrian Gould and Cedric Anover. All rights reserved.
+        </p>
+
+        <ul class="text-center md:text-left flex flex-col md:flex-row justify-items-center items-center my-[5px] md:my-[10px]">
+            <li><a href="https://www.northmetrotafe.wa.edu.au/" target="_blank"
+                   class="mr-2 mb-[5px] hover:bg-[#DDDCE5] hover:text-black px-2 py-2 rounded-md">North Metro TAFE</a>
+            </li>
+            <li><a href="https://dev.screencraft.net.au/" target="_blank"
+                   class="mr-2 mb-[5px] hover:bg-[#DDDCE5] hover:text-black px-2 py-2 rounded-md">ScreenCraft Dev
+                Sites</a></li>
+            <li><a href="./contact.html" class="mr-2 mb-[5px] hover:bg-[#DDDCE5] hover:text-black px-2 py-2 rounded-md">Contact
+                Us</a></li>
+            <li><a href="./copyright.html"
+                   class="mr-2 mb-[5px] hover:bg-[#DDDCE5] hover:text-black px-2 py-2 rounded-md">Copyright</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>

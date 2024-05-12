@@ -1,0 +1,69 @@
+<template id="card-template">
+    <style>
+        @import url('./assets/css/site.css');
+
+        .image-popup {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-container {
+            display: none;
+            position: fixed;;
+            margin-right: 10px;
+            margin-left: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;  /* Ensure it appears on top of other elements */
+            background-color: white;
+            overflow: auto;  /* Add scrollbars if content overflows */
+            width: 90vw;  /* 90% of the viewport's width */
+            height: 90vh;  /* 90% of the viewport's height */
+        }
+    </style>
+
+    <div class="h-full w-auto sm:w-fit md:min-w-[500px] md:min-h-[600px] border border-gray-500 flex flex-col gap-4 p-4 mt-10 mb-10 ml-5 mr-5">
+        <!--Card Header-->
+        <div class="bg-gray-800 text-gray-200 p-4 -m-4 mb-0">
+            <a id="anchor-href" href="">
+                <h4 id="card-header" class="text-bold text-xl text-center">
+                </h4>
+            </a>
+        </div>
+
+        <div class="-m-4 mb-2 max-h-48 overflow-hidden">
+        </div>
+
+        <!--Popup to View Content of a Phase-->
+        <div class="image-popup">
+            <div class="popup-image">
+                <div class="text-black font-bold py-2 px-4 rounded">
+                    Enlarge
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-overlay"></div>
+        <div class="popup-container">
+            <iframe id="iframe-1" src="" class="w-full h-full"></iframe>
+        </div>
+        <iframe id="iframe-2" src="" class="w-full h-full"></iframe>
+
+        <!--Card Footer-->
+        <div class="bg-gray-200 text-gray-800 p-4 -m-4 mt-0">
+        </div>
+    </div>
+</template>

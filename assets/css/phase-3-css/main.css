@@ -1,0 +1,288 @@
+/* ################################## Mobile ################################## */
+/* ------------------------------ Header */
+/* 1x2 Grid for site-logo-and-name & navigation */
+.site-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    /* Configuration for Header
+    Footer will be fixed to the bottom of the articles and
+    the Header will stay in place
+    */
+    position: fixed;
+    width: 100%;  /* Need to Occupy the whole space in header */
+    top: 0;  /* header stays at the top-left corner of the viewport */
+    left: 0; /* header stays at the top-left corner of the viewport */
+    background-color: #b934ea;
+}
+
+/* Header Logo & Site Name */
+.site-logo-and-name {
+    /* Position in Grid */
+    grid-column: 1;
+    grid-row: 1;
+    /* Flexbox for Logo and Site Name */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;  /* Main Axis - Row */
+    align-items: center;  /* Cross Axis - Column */
+}
+
+.site-logo {
+    margin: 5px 10px 5px 5px;
+}
+
+/* Logo Image */
+.site-logo  img {
+    width: 100%;
+    height: auto;
+}
+
+/* Navigation Element */
+.site-header > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.nav-container {
+    display: none;  /* Navigation must be hidden on mobile size */
+}
+
+.nav-container a {
+    color: black;  /* Need to use Black as Blue does not look good on Fuchsia Pink Header Background */
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Style the Hamburger Menu */
+.hamburger-menu {
+    font-size: 320%;  /* Increase Size of Hamburger Menu */
+    cursor: pointer;
+}
+
+/* ------------------------------ Main */
+main {
+    margin-top: 135px;  /* Add Margin on top of main to make the header stay in place */
+}
+
+.main-aside {
+    display: none;  /* Aside for Mobile must not be displayed */
+}
+
+/* Articles Layout */
+.main-articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Main Axis - Row */
+    align-items: center;  /* Cross Axis - Column */
+}
+
+.articles-item {
+    border: 1px solid #000;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.articles-item img {
+    max-width: 300px;
+    min-width: 100px;
+    height: auto;
+}
+
+.articles-item:hover {
+    background-color: #ff8aef;
+}
+
+.articles-item ::selection {
+    background-color: cornflowerblue;
+    color: black;
+}
+
+/* ------------------------------ Footer */
+.site-footer {
+    /* Flexbox for Mobile Footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: #c584dc;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+/* Footer Navigation */
+.site-footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer-nav li {
+    display: inline-block;  /* Make Footer Navigation Horizontal */
+}
+
+.site-footer-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.site-footer-nav li:not(:last-child)::after {
+    content: ' | '; /* Add Separator to non-first and non-last item */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* ################################## Desktop ################################## */
+@media screen and (min-width: 1200px) {
+    /* ------------------------------ Header */
+    .site-header {
+        all: unset;  /* Just to ensure we dont inherit any attributes from Mobile */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        /* Configuration for Header
+        Footer will be fixed to the bottom of the articles and
+        the Header will stay in place
+        */
+        position: fixed;
+        width: 100%;  /* Need to Occupy the whole space in header */
+        top: 0;
+        left: 0;
+        background-color: #b934ea;
+        padding-bottom: 0.8%;
+    }
+
+    .site-logo-and-name {
+        all: unset;
+        /* Flexbox for Logo and Site Name */
+        display: flex;
+        flex-direction: row;
+        justify-content: start;  /* Main Axis - Row */
+        align-items: center;  /* Cross Axis - Column */
+        /* Box Model */
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+    .site-logo-and-name div {
+        margin-right: 10px;  /* Set Margin between Logo and Site Name */
+    }
+
+    /* ------------------------------ Navigation  */
+    .site-header > nav {
+        all: unset;  /* Unset so we dont inherit the previous attribute configurations */
+    }
+
+    .hamburger-menu {
+        display: none;  /* Dont Display the Hamburger Menu for Desktop */
+    }
+
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;  /* Main Axis - Row */
+        align-items: flex-start;  /* Cross Axis - Column */
+        margin-top: 5%;
+    }
+
+    .nav-container .nav-item:first-child {
+        margin-left: 23vw;  /* Add Left Margin for Navigation (vw for unit size) */
+    }
+
+    .nav-item {
+        margin-right: 7%;  /* Add Space between Navigation Items */
+    }
+
+    .nav-item a {
+        text-decoration: none;
+    }
+
+    /* ------------------------------ Main */
+    main {
+        margin-left: 17%;  /* Add Left Margin for Main */
+        margin-right: 17%;  /* Add Right Margin for Main */
+        margin-top: 200px;
+    }
+
+    .main-articles-aside {
+        /* Grid Layout with 1 Row and 2 Columns (Articles and Aside) */
+        display: grid;
+        grid-template-columns: 2fr 1fr
+    }
+
+    /* Articles Layout
+    The .main-articles will have the same layout for both Mobile and Desktop
+    */
+
+    .articles-item {
+        margin-bottom: 1.5%;
+    }
+
+    .main-aside {
+        display: block;  /* Show the Aside for Desktop */
+    }
+
+    .main-aside img {
+        max-width: 250px;
+        min-width: 100px;
+        height: auto;
+    }
+
+    /* Aside Layout */
+    .main-aside aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;  /* Main Axis - Row */
+        align-items: flex-start;  /* Cross Axis - Column */
+    }
+
+    .main-aside aside > section {
+        border-bottom: 1px solid grey;
+        padding-bottom: 15px;
+    }
+
+    .main-aside aside > section:first-child footer::before {
+        /* Add a Footer to First Child in the Aside Container */
+        content: "Cedric Anover";
+    }
+
+    .main-aside aside > section:last-child {
+        border-bottom: none;  /* Dont put Bottom Border to Last Child */
+    }
+
+    /* ------------------------------ Footer */
+    .site-footer {
+        all: unset;  /* Unset the attributes from mobile */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #c584dc;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    /* Footer Navigation */
+
+    .site-footer-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 30px;
+    }
+
+    .site-footer li {
+        display: block;
+    }
+
+    .site-footer-nav li:not(:last-child)::after {
+        all: unset;
+    }
+}

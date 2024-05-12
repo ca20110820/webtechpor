@@ -1,0 +1,15 @@
+{
+  "name": "civ-web-technologies-portfolio-phases-ca20110820",
+  "version": "1.0.0",
+  "description": "To use this folder structure",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

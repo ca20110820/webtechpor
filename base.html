@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cedric Anover | Web Tech | Cert 4 Programming</title>
+
+    <link rel="stylesheet" href="./assets/css/site.css">
+</head>
+<body>
+<header class="text-gray-200 bg-gray-800 border-t border-x border-gray-100 shadow-sm body-font px-[10px] py-[5px]">
+    <div class="flex justify-center items-center mx-auto lg:flex-row gap-2">
+        <!--Logo and Site Name-->
+        <a href="." class="flex justify-between items-center gap-2">
+            <img src="https://placehold.co/64?text=logo" alt="Logo"
+                 class="w-[60px] md:w-[90px] lg:w-[105px] px-[5px] py-[5px]">
+            <h1 class="text-sm font-mono font-bold px-[5px] py-[5px]">Certificate IV in IT (Programming) Web Tech
+                Portfolio</h1>
+        </a>
+
+        <!--Navigation for Larger Screens-->
+        <nav class="hidden md:flex md:justify-items-center md:w-auto ml-auto md:mx-auto">
+            <ul class="font-mono text-md border-gray-300 list-reset md:flex justify-end flex-1 items-center ml-10">
+                <li><a href="." class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Home</a></li>
+                <li><a href="phase-1" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Phase 1</a></li>
+                <li><a href="phase-2" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Phase 2</a></li>
+                <li><a href="phase-3" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Phase 3</a></li>
+                <li><a href="phase-4" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Phase 4</a></li>
+                <li><a href="phase-5" class="hover:bg-[#DDDCE5] hover:text-black px-3 py-2 rounded-md">Phase 5</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Icon (for Smaller Screens) -->
+        <div class="block md:hidden">
+            <button id="menu-toggle"
+                    class="text-gray-50 focus:outline-none focus:text-gray-50 focus:bg-[#615F81] p-2 rounded-lg border-2 border-[#E7E7E7]">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu for Smaller Screens -->
+    <div class="md:hidden" id="mobile-menu">
+        <ul class="list-reset">
+            <li><a href="." class="block hover:bg-[#9E9BB5] px-4 py-2">Home</a></li>
+            <li><a href="phase-1" class="block hover:bg-[#9E9BB5] px-4 py-2">Phase 1</a></li>
+            <li><a href="phase-2" class="block hover:bg-[#9E9BB5] px-4 py-2">Phase 2</a></li>
+            <li><a href="phase-3" class="block hover:bg-[#9E9BB5] px-4 py-2">Phase 3</a></li>
+            <li><a href="phase-4" class="block hover:bg-[#9E9BB5] px-4 py-2">Phase 4</a></li>
+            <li><a href="phase-5" class="block hover:bg-[#9E9BB5] px-4 py-2">Phase 5</a></li>
+        </ul>
+    </div>
+</header>
+
+<!--Add Templates here-->
+
+<footer class="text-gray-400 bg-gray-800 text-sm font-mono border-t border-x mt-auto border-gray-100 shadow-sm">
+    <div class="container w-full mx-auto flex flex-col md:flex-row items-center justify-between">
+        <a href="." class="flex items-center my-[5px] md:my-[10px]">
+            <img src="https://placehold.co/64?text=logo" alt="Logo">
+        </a>
+
+        <p class="my-[5px] px-[10px] md:my-[10px] text-center">
+            © Copyright 2023 Adrian Gould and Cedric Anover. All rights reserved.
+        </p>
+
+        <ul class="text-center md:text-left flex flex-col md:flex-row justify-items-center items-center my-[5px] md:my-[10px]">
+            <li><a href="https://www.northmetrotafe.wa.edu.au/" target="_blank" class="mr-2 mb-[5px] hover:bg-[#DDDCE5] hover:text-black px-2 py-2 rounded-md">North Metro TAFE</a></li>
+            <li><a href="https://dev.screencraft.net.au/" target="_blank" class="mr-2 mb-[5px] hover:bg-[#DDDCE5] hover:text-black px-2 py-2 rounded-md">ScreenCraft Dev Sites</a></li>
+            <li><a href="./pages/contact.html" class="mr-2 mb-[5px] hover:bg-[#DDDCE5] hover:text-black px-2 py-2 rounded-md">Contact Us</a></li>
+            <li><a href="./pages/copyright.html" class="mr-2 mb-[5px] hover:bg-[#DDDCE5] hover:text-black px-2 py-2 rounded-md">Copyright</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="card.js"></script>
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>

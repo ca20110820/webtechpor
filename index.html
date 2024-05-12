@@ -1,0 +1,42 @@
+<script>
+    fetch('./base.html').then(async response => await response.text()).then(function (html) {
+        const parser = new DOMParser();
+        const dom = parser.parseFromString(html, 'text/html');
+
+        let container = dom.createElement('div');
+        let header = dom.querySelector('body header:first-child');
+        header.insertAdjacentElement('afterend', container);
+
+        container.innerHTML = `
+        <main class="mb-3">
+            <div class="flex flex-col justify-center w-full">
+                <div class="flex flex-col justify-items-center text-center my-[5px] md:my-[10px]">
+                    <h2 class="text-2xl font-bold">Certificate IV in IT (Programming)</h2>
+                    <p>Web Technologies Portfolio as implemented by Cedric Anover</p>
+                </div>
+
+                <div id="card-container" class="flex flex-col justify-items-center md:flex-row h-auto w-full mx-auto md:overflow-x-auto">
+                    <!--Populate with Cards using JavaScript-->
+                    <custom-card phase="1"></custom-card>
+                    <custom-card phase="2"></custom-card>
+                    <custom-card phase="3"></custom-card>
+                    <custom-card phase="4"></custom-card>
+                </div>
+            </div>
+        </main>
+        `;
+
+        // Replace the document content with the modified HTML
+        document.documentElement.innerHTML = dom.documentElement.innerHTML;
+
+        // Extract and execute the JavaScript code
+        const scriptElements = dom.querySelectorAll('script');
+        scriptElements.forEach(script => {
+            const newScript = document.createElement('script');
+            newScript.textContent = script.textContent;
+            document.body.appendChild(newScript);
+        });
+    });
+</script>
+
+<script src='card.js'></script>
